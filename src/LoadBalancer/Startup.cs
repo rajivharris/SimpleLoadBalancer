@@ -15,6 +15,7 @@ namespace LoadBalancer
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<IServiceRegistry, ServiceRegistry>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -25,10 +26,10 @@ namespace LoadBalancer
                 app.UseDeveloperExceptionPage();
             }
 
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
+            //add registry service middleware to the pipeline
+            app.UseRegistryService();
+            //add load balancer to the pipeline
+            app.UseLoadBalancer();
         }
     }
 }

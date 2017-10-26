@@ -20,6 +20,7 @@ namespace LoadBalancer
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
+                .UseUrls("http://localhost:60000")
                 .Build();
     }
 }

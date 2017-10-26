@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{25ACE571-A84
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadBalancer", "src\LoadBalancer\LoadBalancer.csproj", "{A45DEB47-0BEB-4546-B983-2DBF00C6FCA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "src\WebApi\WebApi.csproj", "{883EFAED-D487-4D3D-BAAB-D93573E5B01F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "src\WebServer\WebServer.csproj", "{883EFAED-D487-4D3D-BAAB-D93573E5B01F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
